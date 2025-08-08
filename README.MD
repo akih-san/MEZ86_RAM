@@ -25,7 +25,7 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 ![](photos/opening.png)<br>
 
 # 特徴
-・動作CPU : Intel8086 CPU（その他互換CPU) 5MHz/8MHz/10MHz、またはNEC V30(μPD70116) 10MHz/16MHz<br>
+・動作CPU : Intel8086 CPU（その他互換CPU) 5MHz/8MHz/10MHz、または、NEC V30(μPD70116) 10MHz/16MHz<br>
 ・Microcontroller : PIC18F47Q43, PIC18F47Q84, PIC18F47Q83（注1）（注2）<br>
 ・1MB SRAM搭載(AS6C4008-55PCN 2個)<br>
 ・μSDカードI/F（SPI)<br>
@@ -33,16 +33,16 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 ・UART（9600bps無手順）<br>
 ・動作プログラム : 後述<br>
 （注1）<br>
-PIC18F47QXXのCLC機能を使って8086/V30のINTRを実現しています。プログラムでの割込みベクター発生のため
+　PIC18F47QXXのCLC機能を使って8086/V30のINTRを実現しています。プログラムでの割込みベクター発生のため
 CPU速度10MHzまでのサポートになります。12.8MHz, 16MHzのクロック指定をした場合、INTRが発生しないように
 ファームウェアで調整されます。<br>
 （注2）<br>
-PIC18F47QXXから1MBメモリをアクセスするために、8086/V30のALE信号にCPLD(ATF22V10)でゲートロジックを
+　PIC18F47QXXから1MBメモリをアクセスするために、8086/V30のALE信号にCPLD(ATF22V10)でゲートロジックを
 通しています。<br>
 そのため、V30(μPD70116) 16MHz動作が安定しません。12.8MHzでの動作で安定してると思われます。<br>
 クロックの設定は、12.8MHz, 16MHzが指定できますが、INTRを使用する場合には10MHz以下に設定する必要があります。<br>
-（注2）<br>
-I2Cの制御ドライバは、[EMU57Q-8088/V20](https://github.com/akih-san/EMU57Q-Rrv2.1_CPM_MSDOS)のファームウェアを流用しています。<br>
+（注3）<br>
+ I2Cの制御ドライバは、[EMU57Q-8088/V20](https://github.com/akih-san/EMU57Q-Rrv2.1_CPM_MSDOS)のファームウェアを流用しています。<br>
 
 # プログラム
 提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
