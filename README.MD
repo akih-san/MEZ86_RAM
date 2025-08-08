@@ -23,12 +23,14 @@ PICから、レガシーCPUのメモリ空間にアクセスすることで、�
 MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの選択待ちになります。
 
 ![](photos/opening.png)<br>
+
+# 特徴
 以下のプログラムについては、<br><br>
  ・Universal Monitor<br>
  ・Toyoshiki Tiny Basic<br>
  ・VTL-C<br>
  ・GAME-C Interpreter<br>
-<br><br>
+<br>
 [SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)をベースに
 MEZ86_RAM上で動作するように移植したものです。<br>
 <br>
