@@ -32,10 +32,17 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
  ・Toyoshiki Tiny Basic<br>
  ・VTL-C<br>
  ・GAME-C Interpreter<br>
-<br><br>
+<br>
 [MEZ88_RAM](https://github.com/akih-san/MEZ88_RAM)<br>
  ・CP/M-86<br>
  ・MS-DOS<br>
+<br>
+[8086 NASCOM BASIC](https://github.com/satoshiokue/8086_NASCOM_BASIC)<br>
+ ・8086 NASCOM BASIC<br>
+
+8086 NASCOM BASICは、[@S_Okue](https://github.com/satoshiokue)さんによって
+Z80用のアセンブラから、8086用のアセンブラにコンバートしたものです。<br>
+今回、MEZ86_RAM上で動くように移植しました。<br>
 
 
 
