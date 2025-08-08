@@ -25,7 +25,7 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 ![](photos/opening.png)<br>
 
 # プログラム
-提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br><br>
+提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
 
 [SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)<br>
  ・Universal Monitor<br>
