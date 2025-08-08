@@ -27,7 +27,8 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 
 # 特徴
 提供しているプログラムは、[SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)をベースに
-MEZ86_RAM上で動作するように移植したものです。[SBCV20](https://vintagechips.wordpress.com/category/8088-v20/)
+MEZ86_RAM上で動作するように移植したものです。<br>
+[SBCV20](https://vintagechips.wordpress.com/category/8088-v20/)
 は[電脳伝説](https://vintagechips.wordpress.com/)さんによって作成されたSBCです。<br>
-技術資料は[こちら](http://www.amy.hi-ho.ne.jp/officetetsu/storage/sbcv20_techdata.pdf)<br>
-入手先は[こちら](https://store.shopping.yahoo.co.jp/orangepicoshop/pico-a-037.html)<br>
+	=> 技術資料は[こちら](http://www.amy.hi-ho.ne.jp/officetetsu/storage/sbcv20_techdata.pdf)<br>
+	=> 入手先は[こちら](https://store.shopping.yahoo.co.jp/orangepicoshop/pico-a-037.html)<br>
