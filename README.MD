@@ -62,7 +62,13 @@ Tiny RTC moduleはArduinoで使用可能で、amazon, AliExpress等のから入�
 テストでは互換品を使いましたが、特に問題なく使用できました。<br>
 SQピン端子は未使用です。SCL、SDA、VCC、GNDの４ピンを使用しています。<br>
 
-# 動作プログラム
+(tiny_rtc_modules)<br>
+![](photos/tiny_rtc_modules1.png)
+
+(tiny_rtc_modules互換品.png)<br>
+![](photo/tiny_rtc_modules互換品1.png)<br>
+
+# ４．動作プログラム
 提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
 
 [SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)<br>
@@ -87,7 +93,7 @@ Z80用のアセンブラから、8086用のアセンブラにコンバートさ�
 
 
 
-# SBCV20について
+## SBCV20について
 [SBCV20](https://vintagechips.wordpress.com/category/8088-v20/)
 は[電脳伝説](https://vintagechips.wordpress.com/)さんによって作成されたSBCです。<br>
 SBCV20の技術資料は[こちら](http://www.amy.hi-ho.ne.jp/officetetsu/storage/sbcv20_techdata.pdf)<br>
