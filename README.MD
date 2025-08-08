@@ -66,7 +66,7 @@ SQピン端子は未使用です。SCL、SDA、VCC、GNDの４ピンを使用し
 ![](photos/tiny_rtc_modules1.png)
 
 (tiny_rtc_modules互換品.png)<br>
-![](photo/tiny_rtc_modules互換品1.png)<br>
+![](photos/tiny_rtc_modules互換品1.png)<br>
 
 # ４．動作プログラム
 提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
