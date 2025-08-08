@@ -19,12 +19,12 @@ PICから、レガシーCPUのメモリ空間にアクセスすることで、�
 ことが出来るため、ROMは必要なくSRAMでプログラムを動作させることが出来ます。
 
 
-# 起動画面
+# １．起動画面
 MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの選択待ちになります。
 
 ![](photos/opening.png)<br>
 
-# 特徴
+# ２．特徴
 ・動作CPU : Intel8086 CPU（その他互換CPU) 5MHz/8MHz/10MHz、または、NEC V30(μPD70116) 10MHz/16MHz<br>
 ・Microcontroller : PIC18F47Q43, PIC18F47Q84, PIC18F47Q83（注1）（注2）<br>
 ・1MB SRAM搭載(AS6C4008-55PCN 2個)<br>
@@ -55,7 +55,14 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 （注5）<br>
 　コンフィグ設定ファイルで割込みベクター番号の設定が可能<br>
 
-# プログラム
+# ３．RTC(DS1307)モジュール
+DS1307を使ったTiny RTC moduleをサポートします。<br>
+Tiny RTC moduleはArduinoで使用可能で、amazon, AliExpress等のから入手することができます。<br>
+また、安価な互換品が出回っています。<br>
+テストでは互換品を使いましたが、特に問題なく使用できました。<br>
+SQピン端子は未使用です。SCL、SDA、VCC、GNDの４ピンを使用しています。<br>
+
+# 動作プログラム
 提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
 
 [SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)<br>
