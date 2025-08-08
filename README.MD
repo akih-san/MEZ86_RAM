@@ -24,16 +24,18 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 
 ![](photos/opening.png)<br>
 
-# 特徴
-以下のプログラムについては、<br><br>
+# プログラム
+提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br><br>
+
+[SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)<br>
  ・Universal Monitor<br>
  ・Toyoshiki Tiny Basic<br>
  ・VTL-C<br>
  ・GAME-C Interpreter<br>
-<br>
-[SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)をベースに
-MEZ86_RAM上で動作するように移植したものです。<br>
-<br>
+<br><br>
+[MEZ88_RAM](https://github.com/akih-san/MEZ88_RAM)<br>
+ ・CP/M-86<br>
+ ・MS-DOS<br>
 
 
 
