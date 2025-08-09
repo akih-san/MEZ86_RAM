@@ -53,7 +53,7 @@ MEZ86_RAM Rev1.1を起動すると、初期化終了後に、プログラムの�
 　NMI割込みで、常駐プログラムのモニター（Universal Monitor）が起動します。<br>
 　モニターのbyeコマンドで、CPU側にリセットをかけてファームウェアの入力待ちに戻ることが出来ます。<br>
 （注5）<br>
-　コンフィグ設定ファイルで割込みベクター番号の設定が可能<br>
+　[コンフィグ設定ファイル](https://github.com/akih-san/MEZ86_RAM/tree/main/DISKS)で割込みベクター番号の設定が可能<br>
 
 # ３．RTC(DS1307)モジュール
 DS1307を使ったTiny RTC moduleをサポートします。<br>
