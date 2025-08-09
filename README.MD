@@ -61,6 +61,11 @@ Tiny RTC moduleはArduinoで使用可能で、amazon, AliExpress等のから入�
 また、安価な互換品が出回っています。<br>
 テストでは互換品を使いましたが、特に問題なく使用できました。<br>
 SQピン端子は未使用です。SCL、SDA、VCC、GNDの４ピンを使用しています。<br>
+<br>
+日時の設定は、ファームウェア起動時のセレクトリスト0番（TOD）で指定します。<br>
+もしくは、MS-DOSのdate, timeコマンドで設定することが出来ます。<br>
+RTC(DS1307)モジュールが接続されていない場合、PICのtimer0の10msタイマーを用いて、<br>
+日時をカウントします。その場合、電源OFFで日時が2025/06/01 00:00:00にリセットされます。<br>
 
 (tiny_rtc_modules)<br>
 ![](photos/tiny_rtc_modules1.png)
