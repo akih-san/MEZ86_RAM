@@ -45,3 +45,6 @@ Interrupt INT20H has occured 300 times.<br>
 が表示されます。<br>
 <br>
 停止はCtrl+Qキー2回連続入力でNMIを発生させます。<br>
+
+(INTR TEST結果)<br>
+![](INTR_TEST確認結果.png)
