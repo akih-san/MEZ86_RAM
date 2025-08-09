@@ -175,7 +175,7 @@ CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込�
 　・TT_BAS86.BIN		（豊四季タイニーベーシック）<br>
 　・UMON_S86.BIN		（86版ユニバーサルモニタ）<br>
 　・VTL_S86.BIN			（Very Tiny Language）<br>
-　・MEZ86.CFG			  （MEZ86_RAM コンフィグファイル）<br>
+　・MEZ86.CFG			      （MEZ86_RAM コンフィグファイル）<br>
 
 
 
