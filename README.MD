@@ -68,7 +68,13 @@ SQピン端子は未使用です。SCL、SDA、VCC、GNDの４ピンを使用し
 (tiny_rtc_modules互換品.png)<br>
 ![](photos/tiny_rtc_modules互換品1.png)<br>
 
-# ４．動作プログラム
+# ４．μＳＤカードモジュール
+SPIで制御されるμＳＤカードモジュールは、Arduinoで使用可能で、amazon, AliExpress等のから入手することができます。<br>
+
+(μSD Card module)<br>
+![](photos/μSD.png)
+
+# ５．動作プログラム
 提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
 
 [SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)<br>
