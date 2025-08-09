@@ -103,7 +103,7 @@ SPIで制御されるμＳＤカードモジュールは、Arduinoで使用可�
 [8086 NASCOM BASIC](https://github.com/satoshiokue/8086_NASCOM_BASIC)<br>
  ・8086 NASCOM BASIC<br>
 
-8086 NASCOM BASICは、[@S_Okue](https://x.com/S_Okue)さん[Github](https://github.com/satoshiokue)によって
+8086 NASCOM BASICは、[@S_Okue](https://x.com/S_Okue)さん([Github](https://github.com/satoshiokue))によって
 Z80用のアセンブラから、8086用のアセンブラにコンバートされたものです。<br>
 今回、MEZ86_RAM上で動くように移植しました。<br>
 <br>
