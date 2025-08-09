@@ -118,6 +118,26 @@ Universal Monitorは、単体で起動できますが、他のプログラムを
 ![](photos/MSDOS終了.png)
 
 
+# ７．ファームウェアの書き込み
+## 1. PIC18F47Q43/Q84/Q83
+PICへの書き込みツールを用いて、Hexファイルを書き込みます。
+INTRによる割込みベクター発生のタイミング調整のため、クロック別にHexファイルがあります。
+使用するCPUのクロックに合わせて使用します。<br>
+INTRを使用しない場合には、どのHexファイルを使用しても構いません。ファームウェア起動時に
+指定クロック優先でINTRの可不可が調整されます。<br>
+<br>
+- PIC18F47Q43 - Q43Rev2.1.hex
+　　Q43_5MHz.hex
+　　Q43_8MHz.hex
+　　Q43_9_10MHz.hex
+- PIC18F47Q84 - Q84Rev2.1.hex
+　　Q84_5MHz.hex
+　　Q84_8MHz.hex
+　　Q84_9_10MHz.hex
+- PIC18F47Q83 - Q83Rev2.1.hex
+　　Q83_5MHz.hex
+　　Q83_8MHz.hex
+　　Q83_9_10MHz.hex
 
 
 
