@@ -126,18 +126,41 @@ INTRによる割込みベクター発生のタイミング調整のため、ク�
 INTRを使用しない場合には、どのHexファイルを使用しても構いません。ファームウェア起動時に
 指定クロック優先でINTRの可不可が調整されます。<br>
 <br>
-- PIC18F47Q43 - Q43Rev2.1.hex
-　　Q43_5MHz.hex
-　　Q43_8MHz.hex
-　　Q43_9_10MHz.hex
-- PIC18F47Q84 - Q84Rev2.1.hex
-　　Q84_5MHz.hex
-　　Q84_8MHz.hex
-　　Q84_9_10MHz.hex
-- PIC18F47Q83 - Q83Rev2.1.hex
-　　Q83_5MHz.hex
-　　Q83_8MHz.hex
-　　Q83_9_10MHz.hex
+- PIC18F47Q43<br>
+　　Q43_5MHz.hex<br>
+　　Q43_8MHz.hex<br>
+　　Q43_9_10MHz.hex<br>
+- PIC18F47Q84
+　　Q84_5MHz.hex<br>
+　　Q84_8MHz.hex<br>
+　　Q84_9_10MHz.hex<br>
+- PIC18F47Q83<br>
+　　Q83_5MHz.hex<br>
+　　Q83_8MHz.hex<br>
+　　Q83_9_10MHz.hex<br>
+<br>
+<br>
+＜使用確認した書き込みツール＞<br>
+<br>
+- snap(マイクロチップ社の書き込みツール)<br>
+
+  - [snap](https://www.microchip.com/en-us/development-tool/PG164100)
+
+<br>
+- PICkit3（または互換ツール）<br><br>
+  PICkitminus書き込みソフトを用いて、書き込むことが出来ます。以下で入手できます。<br>
+
+  - [PICkitminus](https://github.com/jaka-fi/PICkitminus)
+
+## ２．CPLDへの書き込み
+
+　　CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込みます。
+　　使用したのは、XGecu Programmer Model TL866Ⅱ PLUSです。<br>
+　　少し古いですが、問題なく書き込みが出来ました。XGecu Official Siteは[こちら](https://xgecu.myshopify.com/)<br>
+　　ソフトウェアのダウンロードは[こちら](http://www.xgecu.com/en/Download.html?refreshed=1750208080997)<br>
+
+   ![](photos/ROM_WRITER.JPG)<br>
+（今回使用したROMライタ）
 
 
 
