@@ -188,7 +188,6 @@ CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込�
 ## 謝意
 MEZ86_RAMで動作するプログラムの多くは、元となる情報を公開されている方々のソースコードから移植しています。<br>
 とても有難く使わせてもらい、感謝しています。<br>
-<br>
   - [「VTL(Very Tiny Language)の作成」](https://middleriver.chagasi.com/electronics/vtl.html)
   - [超ミニ言語で遊ぼう（４）みんなで「スタ☆トレ」](https://ameblo.jp/siropyon/entry-11917965564.html)
   - [Universal Monitor](https://electrelic.com/electrelic/node/1317)
