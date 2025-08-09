@@ -70,16 +70,24 @@ RTC(DS1307)モジュールが接続されていない場合、PICのtimer0の10m
 (tiny_rtc_modules)<br>
 ![](photos/tiny_rtc_modules1.png)
 
-(tiny_rtc_modules互換品.png)<br>
-![](photos/tiny_rtc_modules互換品1.png)<br>
-
 # ４．μＳＤカードモジュール
 SPIで制御されるμＳＤカードモジュールは、Arduinoで使用可能で、amazon, AliExpress等のから入手することができます。<br>
 
 (μSD Card module)<br>
 ![](photos/μSD.png)
 
-# ５．動作プログラム
+# ５．CPLD（22V10）
+以下の外部ロジックをCPLD（22V10）を使用して1chipにまとめてあります。<br>
+<br>
+ ・PICからメモリアクセスを行うため、ALE信号の操作<br>
+ ・SDカードアクセスの一部<br>
+ ・バイト、ワードメモリアクセス関連<br>
+ ・CPU HOLD時に、INTR, MIOの信号をPICでA19,A18として使用するための切替回路<br>
+<br>
+動作確認は、ATF22V10C-7PX, GAL22V10B-15LPで行っています。<br>
+使用するために、jedファイルをCPLDに書き込む必要があります。<br>
+
+# ６．動作プログラム
 提供しているプログラムについては、他のリポジトリのプログラムをMEZ86_RAM上で動作するように移植したものです。<br>
 
 [SBCV20_8088](https://github.com/akih-san/SBCV20_8088/tree/main)<br>
