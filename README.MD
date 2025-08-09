@@ -154,13 +154,13 @@ INTRを使用しない場合には、どのHexファイルを使用しても構�
 
 ## ２．CPLDへの書き込み
 
-　　CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込みます。
-　　使用したのは、XGecu Programmer Model TL866Ⅱ PLUSです。<br>
-　　少し古いですが、問題なく書き込みが出来ました。XGecu Official Siteは[こちら](https://xgecu.myshopify.com/)<br>
-　　ソフトウェアのダウンロードは[こちら](http://www.xgecu.com/en/Download.html?refreshed=1750208080997)<br>
+CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込みます。
+使用したのは、XGecu Programmer Model TL866Ⅱ PLUSです。<br>
+少し古いですが、問題なく書き込みが出来ました。XGecu Official Siteは[こちら](https://xgecu.myshopify.com/)<br>
+ソフトウェアのダウンロードは[こちら](http://www.xgecu.com/en/Download.html?refreshed=1750208080997)<br>
 
-   ![](photos/ROM_WRITER.JPG)<br>
 （今回使用したROMライタ）
+![](photos/ROM_WRITER.JPG)<br>
 
 
 
