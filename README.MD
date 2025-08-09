@@ -118,8 +118,8 @@ Universal Monitorは、単体で起動できますが、他のプログラムを
 ![](photos/MSDOS終了.png)
 
 
-# ７．ファームウェア、CPLDへの書き込み
-## 1. PIC18F47Q43/Q84/Q83
+# ７．PIC18F47QXX、CPLDへの書き込み
+## 1. PIC18F47QXXへの書き込み
 PICへの書き込みツールを用いて、Hexファイルを書き込みます。
 INTRによる割込みベクター発生のタイミング調整のため、クロック別にHexファイルがあります。
 使用するCPUのクロックに合わせて使用します。<br>
@@ -161,6 +161,21 @@ CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込�
 （今回使用したROMライタ）
 ![](photos/ROM_WRITER.JPG)<br>
 
+# ８．μＳＤカードの作成
+μSDカードはFAT32を使用しています。4G～16GBまでのＳＤカードで動作確認を行いました。DISKSフォルダ内の以下のフォルダとファイルを、FAT32でフォーマットされた
+μSDカードにコピーします。<br>
+<br>
+＜フォルダ＞
+　・CPMDISKS<br>
+　・DOSDISKS<br>
+<br>
+＜ファイル＞<br>
+　・BASIC_86.BIN		; 8086 NASCOM BASIC<br>
+　・GMI_S86.BIN			; GAME-86 インタプリタ<br>
+　・TT_BAS86.BIN		; 豊四季タイニーベーシック<br>
+　・UMON_S86.BIN		; 86版ユニバーサルモニタ<br>
+　・VTL_S86.BIN			; Very Tiny Language<br>
+　・MEZ86.CFG   ; MEZ86_RAM コンフィグファイル<br>
 
 
 
