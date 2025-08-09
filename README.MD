@@ -117,6 +117,9 @@ Universal Monitorは、単体で起動できますが、他のプログラムを
 (例：MS-DOSを終了しファームウェアに戻る)<br>
 ![](photos/MSDOS終了.png)
 
+## INTRによる割込み
+提供しているプログラムは、移植のみでINTRによる割込みは使用していません。
+INTRの確認は[テストプログラム[(https://github.com/akih-san/MEZ86_RAM/blob/main/i86src/standalone/INTR_test/INTR%E3%81%AE%E7%A2%BA%E8%AA%8D.txt)で行っています。
 
 # ７．PIC18F47QXX、CPLDへの書き込み
 ## 1. PIC18F47QXXへの書き込み
