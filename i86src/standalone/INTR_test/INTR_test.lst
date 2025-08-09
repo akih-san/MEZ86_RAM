@@ -1,0 +1,216 @@
+ AS V1.42 Beta [Bld 271] - Source File INTR_test.asm - Page 1 - 8/4/2025 22:29:35
+
+
+    1/   0 :                            	page 0
+    2/   0 :                            	CPU	8086
+    3/   0 :                            
+    4/   0 : =40H                       CSEG	equ	40h
+    5/   0 :                            
+    6/   0 : =0FF50H                    MON_SEG		equ	0ff50h
+    7/   0 : =1H                        REQ_CONIN	equ	1
+    8/   0 : =2H                        REQ_CONOUT	equ	2
+    9/   0 : =3H                        REQ_CONST	equ	3
+   10/   0 : =4H                        REQ_STROUT	equ	4
+   11/   0 : =0F000H                    DUMMY_PORT	equ	0f000h
+   12/   0 : =0FFH                      TERMINATE	equ	0ffh
+   13/   0 :                            
+   14/   0 :                            	SEGMENT	CODE
+   15/   0 :                            
+   16/   0 :                            	org	0
+   17/   0 :                            
+   18/   0 :                            test_start:
+   19/   0 : FA                         	cli
+   20/   1 : 8C C8                      	mov	ax, cs
+   21/   3 : 8E D8                      	mov	ds, ax		; ds = cs = CSEG
+   22/   5 : 33 C0                      	xor	ax, ax
+   23/   7 : 8E C0                      	mov	es, ax		; es = 0
+   24/   9 :                            	
+   25/   9 :                            ;
+   26/   9 :                            ; set int20h interrupt handler address
+   27/   9 :                            
+   28/   9 : BF 80 00                   	mov	di, 20h*4
+   29/   C : BE 8E 00                   	mov	si, int20h_vec
+   30/   F : B9 02 00                   	mov	cx, 2
+   31/  12 : FC                         	cld
+   32/  13 : F3 A5                      	rep	movsw
+   33/  15 :                            	
+   34/  15 :                            ; opening msg
+   35/  15 :                            
+   36/  15 : BE 92 00                   	mov	si, st_msg
+   37/  18 :                            openmsg:
+   38/  18 : 8A 04                      	mov	al ,[si]
+   39/  1A : 22 C0                      	and	al, al
+   40/  1C : 74 06                      	jz	test_1
+   41/  1E : E8 49 00                   	call	conout
+   42/  21 : 46                         	inc	si
+   43/  22 : EB F4                      	jmp	openmsg
+   44/  24 :                            	
+   45/  24 :                            test_1:
+   46/  24 : BB DC 00                   	mov	bx, int_flg
+   47/  27 : 2E C7 06 DE 00 00 00       	mov	word ptr [int_cnt], 0
+   48/  2E : C6 07 00                   	mov	byte ptr [bx], 0
+   49/  31 : FB                         	sti
+   50/  32 :                            loop:
+   51/  32 : 8A 07                      	mov	al, [bx]
+   52/  34 : 22 C0                      	and	al, al
+   53/  36 : 74 FA                      	jz	loop
+   54/  38 :                            
+   55/  38 : BE B1 00                   	mov	si, intr_msg
+   56/  3B :                            putmsg:
+   57/  3B : 8A 04                      	mov	al ,[si]
+   58/  3D : 22 C0                      	and	al, al
+   59/  3F : 74 06                      	jz	test_2
+   60/  41 : E8 26 00                   	call	conout
+   61/  44 : 46                         	inc	si
+   62/  45 : EB F4                      	jmp	putmsg
+   63/  47 :                            test_2:
+   64/  47 : FA                         	cli
+   65/  48 : EB DA                      	jmp	test_1
+   66/  4A :                            
+   67/  4A :                            ;
+   68/  4A :                            ; int 20h handler
+   69/  4A :                            ;
+   70/  4A :                            int20h:
+   71/  4A : 1E                         	push	ds
+   72/  4B : 53                         	push	bx
+   73/  4C : 50                         	push	ax
+   74/  4D :                            	
+   75/  4D : 0E                         	push	cs
+   76/  4E : 1F                         	pop	ds
+   77/  4F : BB DE 00                   	mov	bx, int_cnt
+   78/  52 : 2E A1 DE 00                	mov	ax, [int_cnt]
+   79/  56 : 40                         	inc	ax
+   80/  57 : 3D 2C 01                   	cmp	ax, 300
+   81/  5A : 75 08                      	jne	add_cnt
+   82/  5C :                            
+   83/  5C : 2E C6 06 DC 00 01          	mov	byte ptr [int_flg], 1
+   84/  62 : 33 C0                      	xor	ax, ax
+   85/  64 :                            add_cnt:
+   86/  64 : 89 07                      	mov	[bx], ax
+   87/  66 :                            
+   88/  66 : 58                         	pop	ax
+   89/  67 : 5B                         	pop	bx
+   90/  68 : 1F                         	pop	ds
+   91/  69 : CF                         	iret
+   92/  6A :                            
+   93/  6A :                            ;
+   94/  6A :                            ; PIC I/F
+   95/  6A :                            ;
+   96/  6A :                            conout:
+   97/  6A : 1E                         	push	ds
+   98/  6B : 53                         	push	bx
+   99/  6C : BB 50 FF                   	mov	bx, MON_SEG
+  100/  6F : 8E DB                      	mov	ds, bx
+  101/  71 : C6 06 00 00 02             	mov	byte ptr [UREQ_COM], REQ_CONOUT	; set CONOUT request
+  102/  76 : A2 01 00                   	mov	byte ptr [UNI_CHR], al		; set char
+  103/  79 :                            
+  104/  79 : 52                         	push	dx
+  105/  7A : BA 00 F0                   	mov	dx, DUMMY_PORT
+  106/  7D : EC                         	in	al, dx				; invoke PIC F/W
+  107/  7E :                            wait_:
+  108/  7E : A0 00 00                   	mov	al, [UREQ_COM]
+  109/  81 : 0A C0                      	or	al, al
+  110/  83 : 75 F9                      	jnz	wait_
+  111/  85 :                            
+  112/  85 : 5A                         	pop	dx
+  113/  86 : A0 01 00                   	mov	al, [UNI_CHR]			; get char or status
+  114/  89 : 22 C0                      	and	al, al
+  115/  8B :                            
+  116/  8B : 5B                         	pop	bx
+  117/  8C : 1F                         	pop	ds
+  118/  8D : C3                         	ret
+  119/  8E :                            
+  120/  8E :                            int20h_vec:
+  121/  8E : 4A 00                      	dw	int20h
+  122/  90 : 40 00                      	dw	CSEG
+  123/  92 :                            
+  124/  92 : 49 4E 54 52 20 28 49 4E 54 st_msg:		db	"INTR (INT20H) Interrupt test",13,10,0
+        9B : 32 30 48 29 20 49 6E 74 65
+        A4 : 72 72 75 70 74 20 74 65 73
+        AD : 74 0D 0A 00               
+  125/  B1 : 49 6E 74 65 72 72 75 70 74 intr_msg:	db	"Interrupt INT20H has occured 300 times.",13,10,0
+        BA : 20 49 4E 54 32 30 48 20 68
+        C3 : 61 73 20 6F 63 63 75 72 65
+        CC : 64 20 33 30 30 20 74 69 6D
+        D5 : 65 73 2E 0D 0A 00         
+  126/  DB :                            
+  127/  DB :                            	ALIGN	2
+  128/  DC :                            int_flg:	ds	1
+  129/  DD :                            
+  130/  DD :                            	ALIGN	2
+  131/  DE :                            int_cnt:	ds	2
+  132/  E0 :                            
+  133/  E0 :                            
+  134/   0 :                            	SEGMENT	DATA
+  135/   0 :                            	org	0
+  136/   0 :                            
+  137/   0 :                            ; ------------------ unimon Command 
+  138/   0 :                            UREQ_COM	ds	1	; location 00	:unimon request command
+  139/   1 :                            ; ------------------ unimon CONSOLE I/O
+  140/   1 :                            UNI_CHR		ds	1	; location 01	:charcter (CONIN/CONOUT) or counts(STROUT) or status
+  141/   2 :                            STR_OFF		ds	2	; location 02	:string offset
+  142/   4 :                            STR_SEG		ds	2	; location 04	:string segment
+  143/   6 :                            ; ------------------ CBIOS Command
+  144/   6 :                            CREQ_COM	ds	1	; location 06	:CBIOS request command
+  145/   7 :                            ; ------------------ CBIOS CONSOLE I/O
+  146/   7 :                            CBI_CHR		ds	1	; location 07	:charcter (CONIN/CONOUT) or counts(STROUT) or status
+  147/   8 :                            disk_drive	ds	1	; location 08	:
+  148/   9 :                            disk_track	ds	1	; location 09	:
+  149/   A :                            disk_sector	ds	2	; location 0A	:
+  150/   C :                            data_dmal	ds	2	; location 0C	:
+  151/   E :                            data_dmah	ds	2	; location 0E	:
+  152/  10 :                            
+  153/  10 :                            
+  154/  10 :                            	END
+ AS V1.42 Beta [Bld 271] - Source File INTR_test.asm - Page 2 - 8/4/2025 22:29:35
+
+
+  Symbol Table (* = unused):
+  --------------------------
+
+ ADD_CNT :                       64 C |
+*ARCHITECTURE :                                        "i386-unknown-win32" - |
+*CASESENSITIVE :                  0 - | *CBI_CHR :                        7 D |
+ CONOUT :                        6A C | *CONSTPI :        3.141592653589793 - |
+*CREQ_COM :                       6 D |  CSEG :                          40 - |
+*DATA_DMAH :                     0E D | *DATA_DMAL :                     0C D |
+*DATE :                  "8/4/2025" - | *DISK_DRIVE :                     8 D |
+*DISK_SECTOR :                   0A D | *DISK_TRACK :                     9 D |
+ DUMMY_PORT :                 0F000 - | *FALSE :                          0 - |
+*HAS64 :                          0 - | *HASFPU :                         0 - |
+ INT20H :                        4A C |  INT20H_VEC :                    8E C |
+ INTR_MSG :                     0B1 C |  INT_CNT :                      0DE C |
+ INT_FLG :                      0DC C | *LISTON :                         1 - |
+ LOOP :                          32 C | *MACEXP :                         7 - |
+*MOMCPU :                      8086 - | *MOMCPUNAME :                "8086" - |
+ MON_SEG :                    0FF50 - | *NESTMAX :                      100 - |
+ OPENMSG :                       18 C |  PUTMSG :                        3B C |
+*RELAXED :                        0 - | *REQ_CONIN :                      1 - |
+ REQ_CONOUT :                     2 - | *REQ_CONST :                      3 - |
+*REQ_STROUT :                     4 - | *STR_OFF :                        2 D |
+*STR_SEG :                        4 D |  ST_MSG :                        92 C |
+*TERMINATE :                    0FF - |  TEST_1 :                        24 C |
+ TEST_2 :                        47 C | *TEST_START :                     0 C |
+*TIME :                  "22:29:35" - | *TRUE :                           1 - |
+ UNI_CHR :                        1 D |  UREQ_COM :                       0 D |
+*VERSION :                     142F - |  WAIT_ :                         7E C |
+
+     50 symbols
+     30 unused symbols
+
+ AS V1.42 Beta [Bld 271] - Source File INTR_test.asm - Page 3 - 8/4/2025 22:29:35
+
+
+  Code Pages:
+  ----------
+
+STANDARD (0 changed characters)
+
+1 code page
+
+0.07 seconds assembly time
+
+    155 lines source file
+      3 passes
+      0 errors
+      0 warnings
