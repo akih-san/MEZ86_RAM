@@ -177,24 +177,28 @@ CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込�
 　・VTL_S86.BIN			（Very Tiny Language）<br>
 　・MEZ86.CFG			（MEZ86_RAM コンフィグファイル）<br>
 
+# ９．図面、部品表、PICピンアサイン、Gerberデータ
+  - [図面](https://github.com/akih-san/MEZ86_RAM/blob/main/pdf/MEZ86_RAM_R1.1%E5%9B%B3%E9%9D%A2.pdf)
+  - [部品表](https://github.com/akih-san/MEZ86_RAM/blob/main/pdf/MEZ86_RAM%E9%83%A8%E5%93%81%E8%A1%A8.pdf)
+  - [PICピンアサイン](https://github.com/akih-san/MEZ86_RAM/blob/main/pdf/MEZ86_RAM%20R1.1%E3%83%94%E3%83%B3%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%B3.pdf)
+  - [Gerberデータ](https://github.com/akih-san/MEZ86_RAM/tree/main/gerber)
 
-
-# 参考
-## EMUZ80<br>
+## 参考
+### EMUZ80<br>
 EUMZ80はZ80CPUとPIC18F47Q43のDIP40ピンIC2つで構成されるシンプルなコンピュータです。<br>
 　　[電脳伝説 - EMUZ80が完成](https://vintagechips.wordpress.com/2022/03/05/emuz80_reference)
-## SBCV20<br>
+### SBCV20<br>
 [SBCV20](https://vintagechips.wordpress.com/category/8088-v20/)
 は[電脳伝説](https://vintagechips.wordpress.com/)さんによって作成されたSBCです。<br>
 　　[SBCV20の技術資料](http://www.amy.hi-ho.ne.jp/officetetsu/storage/sbcv20_techdata.pdf)<br>
 　　[SBCV20の入手先](https://store.shopping.yahoo.co.jp/orangepicoshop/pico-a-037.html)<br>
-## SuperMEZ80<br>
+### SuperMEZ80<br>
 [SuperMEZ80](https://github.com/satoshiokue/SuperMEZ80)は、EMUZ80にSRAMを追加しZ80をノーウェイトで動かすことができます。
-## ＠hanyazouさんのソース<br>
+### ＠hanyazouさんのソース<br>
 https://github.com/hanyazou/SuperMEZ80/tree/mez80ram-cpm<br>
-## @electrelicさんのユニバーサルモニタ<br>
+### @electrelicさんのユニバーサルモニタ<br>
 https://electrelic.com/electrelic/node/1317<br>
-## オレンジピコショップ<br>
+### オレンジピコショップ<br>
 オレンジピコさんでEMUZ80、その他メザニンボードの購入できます。<br>
 <br>
 https://store.shopping.yahoo.co.jp/orangepicoshop/pico-a-051.html<br>
