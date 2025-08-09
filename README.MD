@@ -177,7 +177,7 @@ CPLDには、ROMライタを使用してCPLD/MEZ86_RAM.jedファイルを書込�
 　・VTL_S86.BIN			（Very Tiny Language）<br>
 　・MEZ86.CFG			（MEZ86_RAM コンフィグファイル）<br>
 
-# ９．図面、部品表、PICピンアサイン、Gerberデータ
+# ９．MEZ86_RAM詳細データ
   - [図面](https://github.com/akih-san/MEZ86_RAM/blob/main/pdf/MEZ86_RAM_R1.1%E5%9B%B3%E9%9D%A2.pdf)
   - [部品表](https://github.com/akih-san/MEZ86_RAM/blob/main/pdf/MEZ86_RAM%E9%83%A8%E5%93%81%E8%A1%A8.pdf)
   - [PICピンアサイン](https://github.com/akih-san/MEZ86_RAM/blob/main/pdf/MEZ86_RAM%20R1.1%E3%83%94%E3%83%B3%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%B3.pdf)
