@@ -1,6 +1,23 @@
 INTRによる10msインターバルタイマー機能の確認方法
 
 INTRをサポートしているファームウェアを使用します。
+
+- PIC18F47Q43
+　　Q43_5MHz.hex
+　　Q43_8MHz.hex
+　　Q43_9_10MHz.hex
+- PIC18F47Q84
+　　Q84_5MHz.hex
+　　Q84_8MHz.hex
+　　Q84_9_10MHz.hex
+- PIC18F47Q83
+　　Q83_5MHz.hex
+　　Q83_8MHz.hex
+　　Q83_9_10MHz.hex
+
+書込んだファームウェアと、MEZ86.CFGで設定するCLKの値が
+合っていない場合、INTRは禁止に調整されるので、注意が必要です。
+
 MEZ86.CFGでCPUのクロックは10MHz以下、IRQ=1となっていることを確認します。
 
 ファームウェアが起動したら、Universal monitorを起動します。
