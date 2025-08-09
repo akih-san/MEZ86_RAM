@@ -196,6 +196,7 @@ MEZ86_RAMで動作するプログラムの多くは、元となる情報を公�
   - [「GAME」という名のプログラミング言語](https://ameblo.jp/takeoka/entry-11004344172.html)
   - [PIC24FJ64GAでGAME言語（その５）](https://piclabo.seesaa.net/article/2015-10-01.html)
   - [Maze for GAME80](https://piclabo.seesaa.net/category/28042960-28.html)
+　　（★2019/05/03　追記の部分です）<br>
 
 ## 参考
 ### EMUZ80<br>
