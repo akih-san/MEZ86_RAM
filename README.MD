@@ -192,7 +192,7 @@ EUMZ80はZ80CPUとPIC18F47Q43のDIP40ピンIC2つで構成されるシンプル�
 [SuperMEZ80](https://github.com/satoshiokue/SuperMEZ80)は、EMUZ80にSRAMを追加しZ80をノーウェイトで動かすことができます。
 ## ＠hanyazouさんのソース<br>
 https://github.com/hanyazou/SuperMEZ80/tree/mez80ram-cpm<br>
-## @electrelicさんのユニバーサルモニタ＞<br>
+## @electrelicさんのユニバーサルモニタ<br>
 https://electrelic.com/electrelic/node/1317<br>
 ## オレンジピコショップ<br>
 オレンジピコさんでEMUZ80、その他メザニンボードの購入できます。<br>
