@@ -95,7 +95,7 @@ SPIで制御されるμＳＤカードモジュールは、Arduinoで使用可�
  ・VTL-C<br>
  ・GAME-C Interpreter<br>
 <br>
-[MEZ88_RAM](https://github.com/akih-san/MEZ88_RAM)<br>
+[MEZ88_RAM](https://github.com/akih-san/MEZ88_RAM/tree/Rev1.2)<br>
  ・CP/M-86<br>
  ・MS-DOS<br>
 <br>
