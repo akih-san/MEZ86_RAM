@@ -1,0 +1,108 @@
+%SIGNAL
+PIN   6 =  A0 
+PIN   2 =  ALE 
+PIN   5 =  BHEX 
+PIN  20 =  CEX 
+PIN   3 =  HOLDA 
+PIN  23 =  INTR 
+PIN   7 =  MISO 
+PIN  13 =  M_IOX 
+PIN  18 =  OEX_H 
+PIN  16 =  OEX_L 
+PIN  21 =  P18 
+PIN  22 =  P19 
+PIN  15 =  RC0 
+PIN   8 =  RDX 
+PIN   4 =  RESET 
+PIN  10 =  SA18 
+PIN  11 =  SA19 
+PIN  14 =  SO 
+PIN   1 =  SSX 
+PIN  19 =  WEX_H 
+PIN  17 =  WEX_L 
+PIN   9 =  WRX 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+BUS_H_ACCSESS =>
+    A0 & !BHEX
+
+BUS_L_ACCSESS =>
+    !A0 & BHEX
+
+CEX =>
+    !HOLDA & !M_IOX & !RESET
+
+OEX_H =>
+    BHEX
+  # RDX
+
+OEX_L =>
+    A0
+  # RDX
+
+P18 =>
+    !HOLDA & !RESET & SA18
+  # M_IOX & RESET
+  # HOLDA & M_IOX
+
+P19 =>
+    !HOLDA & !RESET & SA19
+  # INTR & RESET
+  # HOLDA & INTR
+
+RC0 =>
+    ALE
+
+RC0.oe  =>
+    !HOLDA & !RESET
+
+SO =>
+    MISO
+
+SO.oe  =>
+    !SSX
+
+WARD_ACCESS =>
+    !A0 & !BHEX
+
+WEX_H =>
+    BHEX
+  # WRX
+
+WEX_L =>
+    A0
+  # WRX
+
+hold_cpu =>
+    RESET
+  # HOLDA
+
+CEX.oe  =>
+    1 
+
+INTR.oe  =>
+    0 
+
+OEX_H.oe  =>
+    1 
+
+OEX_L.oe  =>
+    1 
+
+P18.oe  =>
+    1 
+
+P19.oe  =>
+    1 
+
+WEX_H.oe  =>
+    1 
+
+WEX_L.oe  =>
+    1 
+
+%END

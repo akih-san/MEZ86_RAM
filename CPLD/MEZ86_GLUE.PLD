@@ -1,0 +1,83 @@
+Name            MEZ86_RAM;
+Partno          MEZ86_GLUE;
+Revision        1;
+Date            06/29/2025;
+Designer        A. HONDA;
+Company         Hobby;
+Location        None;
+Assembly        None;
+/* Device          g16v8; */
+Device          g22v10;
+
+/* PIN 12 = GND */
+/* PIN 24 = VCC */
+
+/** Inputs **/
+
+PIN 1  = SSX;			/* SPI_SS */
+PIN 2  = ALE;
+PIN 3  = HOLDA;
+PIN 4  = RESET;
+PIN 5  = BHEX;
+PIN 6  = A0;
+PIN 7  = MISO;
+PIN 8  = RDX;
+PIN 9  = WRX;
+PIN 10 = SA18;
+PIN 11 = SA19;
+PIN 13 = M_IOX;
+PIN 23 = INTR;
+
+/** Outputs **/
+
+PIN 14 = SO;            /* MISO output */
+PIN 15 = RC0;			/* output ALE */
+PIN 16 = OEX_L;
+PIN 17 = WEX_L;
+PIN 18 = OEX_H;
+PIN 19 = WEX_H;
+PIN 20 = CEX;
+PIN 21 = P18;
+PIN 22 = P19;
+/* PIN 23 = ; */
+
+/* logic */
+
+hold_cpu = RESET # HOLDA;
+
+P19 = (SA19 & !hold_cpu) # (INTR & hold_cpu);
+P18 = (SA18 & !hold_cpu) # (M_IOX & hold_cpu);
+
+/*CEX = !(M_IOX # (hold_cpu));*/
+/*CEX = !M_IOX & !(hold_cpu);*/
+CEX = !M_IOX & !RESET & !HOLDA;
+
+RC0    = ALE;
+RC0.oe = !hold_cpu;
+/*RC0.oe = !RESET & !HOLDA;*/
+
+SO    = MISO;
+SO.oe = !SSX;
+
+WARD_ACCESS   = !(A0 # BHEX);
+BUS_L_ACCSESS = !A0 & BHEX;
+BUS_H_ACCSESS = A0 & !BHEX;
+/*
+OEX_L = RDX & (BUS_L_ACCSESS # WARD_ACCESS);
+WEX_L = WRX & (BUS_L_ACCSESS # WARD_ACCESS);
+
+OEX_H = RDX & (BUS_H_ACCSESS # WARD_ACCESS);
+WEX_H = WRX & (BUS_H_ACCSESS # WARD_ACCESS);
+*/
+/*
+WEX_H = !BHEX # WRX;
+OEX_H = !BHEX # RDX;
+
+WEX_L = !A0 # WRX;
+OEX_L = !A0 # RDX;
+*/
+WEX_H = BHEX # WRX;
+OEX_H = BHEX # RDX;
+
+WEX_L = A0 # WRX;
+OEX_L = A0 # RDX;
