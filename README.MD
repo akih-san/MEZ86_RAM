@@ -7,8 +7,7 @@ Firmware Rev1.1 is [here](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)<br>
 ## ファームウェアRev1.3での変更点
   - Diskイメージの対応強化
     ファームウェアRev1.1では、ディスクイメージが1.4MBと9.84MB固定でした。<br>
-    Rev1.3では起動時にディスクイメージのFAT情報を読み取り、MS-DOSのBPB情報を<br>
-    設定します。<br>
+    Rev1.3では起動時にディスクイメージのFAT情報を読み取り、MS-DOSのBPB情報を設定します。<br>
     したがって、ネット上にあるアーカイブ上のディスクイメージをDOSDISKSにコピー<br>
     してファイル名をDRIVEA.DSK～DRIVED.DSKに変更すれば、MS-DOS起動時に自動的に<br>
     認識されます。<br>
