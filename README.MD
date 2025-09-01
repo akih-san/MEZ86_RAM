@@ -26,7 +26,7 @@ Firmware Rev1.1 is [here](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)<br>
     さらに、Cコンパイラを内包しています。<br>
     DRIVEDのディスクイメージには、このソースコードを収録しました。<br>
     8086のCPUパワーではmakeにとても時間がかかり、実用的ではありません。<br>
-    [DOSVAXJ3](https://www.nanshiki.co.jp/software/dosvaxj3.html)のような<br>
+    [DOSVAXJ3](https://www.nanshiki.co.jp/software/dosvaxj3.html)のような
     エミュレーターを使った方が実用的です。<br>
     MS-DOSVer4.0については、[ここ](https://qiita.com/reika727/items/32a74226aea427044b41)がとても参考になります。<br>
 
