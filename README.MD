@@ -24,6 +24,6 @@ Firmware Rev1.1 is [here](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)<br>
     強力な開発環境が提供されています。<br>
     DRIVEDのディスクイメージには、この開発環境を収録しました。<br>
 
-## インストール等
+# インストール等
 
-詳細は、[MEZ86_RAM Rev1.1](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)を参照してください。<br>
+## [MEZ86_RAM Rev1.1](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)を参照してください。<br>
