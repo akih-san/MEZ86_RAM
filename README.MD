@@ -1,3 +1,7 @@
+# 工事中(Under construction)
+Please wait a moment. As this is before release, data is being updated as needed.<br>
+Firmware Rev1.1 is [here](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)<br>
+
 # MEZ86_RAM Rev1.1 (ファームウェアRev1.3）
 
 ## ファームウェアRev1.3での変更点
@@ -16,7 +20,7 @@
     DISKD.DSKはFAT16の40MBのディスクイメージです。<br>
     <br>
   - DRIVED.DSKにMS-DOS Ver4.0の開発環境<br>
-    公開されているMS-DOS Ver4.0のソースコードの中には、Ver4.0をビルド出来る<br>
+    公開されている[MS-DOS Ver4.0](https://github.com/microsoft/MS-DOS/tree/main/v4.0)のソースコードの中には、Ver4.0をビルド出来る<br>
     強力な開発環境が提供されています。<br>
     DRIVEDのディスクイメージには、この開発環境を収録しました。<br>
 
