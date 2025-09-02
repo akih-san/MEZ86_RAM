@@ -19,16 +19,10 @@ Firmware Rev1.1 is [here](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)<br>
     大容量のディスクイメージをサポートします。<br>
     DISKD.DSKはFAT16の40MBのディスクイメージです。<br>
     <br>
-  - MS-DOS Ver4.0の開発環境<br>
+  - DRIVED.DSKにMS-DOS Ver4.0の開発環境<br>
     公開されているMS-DOS Ver4.0のソースコードの中には、Ver4.0をビルド出来る<br>
     強力な開発環境が提供されています。<br>
-    この開発環境は従来のMASMに加えて、メイクツールであるNMAKEが提供されており、<br>
-    さらに、Cコンパイラを内包しています。<br>
-    DRIVEDのディスクイメージには、このソースコードを収録しました。<br>
-    ただし、8086のCPUパワーではmakeにとても時間がかかり、実用的ではありません。<br>
-    [DOSVAXJ3](https://www.nanshiki.co.jp/software/dosvaxj3.html)のような
-    エミュレーターを使った方が実用的です。<br>
-    MS-DOSVer4.0については、[ここ](https://qiita.com/reika727/items/32a74226aea427044b41)がとても参考になります。<br>
+    DRIVEDのディスクイメージには、この開発環境を収録しました。<br>
 
 ## インストール等
 
