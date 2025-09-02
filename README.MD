@@ -1,7 +1,3 @@
-# 工事中(Under construction)
-Please wait a moment. As this is before release, data is being updated as needed.<br>
-Firmware Rev1.1 is [here](https://github.com/akih-san/MEZ86_RAM/tree/Rev1.1)<br>
-
 # MEZ86_RAM Rev1.1 (ファームウェアRev1.3）
 
 ## ファームウェアRev1.3での変更点
