@@ -17,7 +17,7 @@
 
   ## 3. DRIVED.DSKに[MS-DOS Ver4.0](https://github.com/microsoft/MS-DOS/tree/main/v4.0)の開発環境
 
-    公開されている[MS-DOS Ver4.0](https://github.com/microsoft/MS-DOS/tree/main/v4.0)のソースコードの中には、Ver4.0をビルド出来る
+    公開されているMS-DOS Ver4.0のソースコードの中には、Ver4.0をビルド出来る
     強力な開発環境が提供されています。
     DRIVEDのディスクイメージには、この開発環境を収録しました。
 
