@@ -97,7 +97,7 @@ SPIで制御されるμＳＤカードモジュールは、Arduinoで使用可�
 <br>
 [MEZ88_RAM](https://github.com/akih-san/MEZ88_RAM/tree/Rev1.2)<br>
  ・CP/M-86<br>
- ・MS-DOS<br>
+ ・MS-DOS Ver2.11<br>
 <br>
 [8086 NASCOM BASIC](https://github.com/satoshiokue/8086_NASCOM_BASIC)<br>
  ・8086 NASCOM BASIC<br>
